@@ -20,18 +20,21 @@ namespace exAbstractAutomovel
         }
         static void BateriaTestes(Automovel veiculo)
         {
+            veiculo.Descicao();
             veiculo.Ligar();
             veiculo.Acelerar();
             veiculo.Frear();
             veiculo.Desligar();
+            veiculo.AbrirPorta();
+            veiculo.AbrirPortaMalas();       
         }
 
         static void GerarVeiculos(List<Automovel> veiculos)
         {
-            veiculos.Add(new Esportivo());
-            veiculos.Add(new Sedan());
-            veiculos.Add(new SUV());
-            veiculos.Add(new Picape());
+            veiculos.Add(new Esportivo(4, "prata", "dpj-4001", 2));
+            veiculos.Add(new Sedan(4, "preta", "wpj-2332",4));
+            veiculos.Add(new SUV(4, "branca", "asp-5000",4));
+            veiculos.Add(new Picape(4,"vermelha", "ase-1313",2));
         }
     }
 }

@@ -9,6 +9,26 @@ namespace exAbstractAutomovel.Veiculos
 {
     public abstract class Automovel : ILigar, IDesligar
     {
+
+        protected int nRodas;
+        protected string cor;
+        protected string placa;
+        protected int nPortas;
+
+        public Automovel(int nRodas, string cor, string placa, int nPortas)
+        {
+            this.nRodas = nRodas;
+            this.cor = cor;
+            this.placa = placa;
+            this.nPortas = nPortas;
+        }
+
+        public abstract void AbrirPortaMalas();
+        public abstract void AbrirPorta();
+        public abstract void Descicao();
+        public abstract void Desligar();
+        public abstract void Ligar();
+
         public virtual void Acelerar()
         {
             Console.WriteLine("Carro acelerando");
@@ -18,8 +38,5 @@ namespace exAbstractAutomovel.Veiculos
         {
             Console.WriteLine("Carro freando");
         }
-
-        public abstract void Desligar(); 
-        public abstract void Ligar();
     }
 }

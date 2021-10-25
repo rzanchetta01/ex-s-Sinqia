@@ -9,10 +9,26 @@ namespace exAbstractAutomovel.Veiculos
     class Picape : Automovel
     {
 
-        public Picape()
+
+        public Picape(int nRodas, string cor, string placa, int nPortas) : base(nRodas, cor, placa, nPortas)
         {
+
         }
 
+        public override void AbrirPortaMalas()
+        {
+            Console.WriteLine("Abrindo porta malas da picape");
+        }
+
+        public override void AbrirPorta()
+        {
+            Console.WriteLine("Abrindo portas da picape");
+        }
+
+        public override void Descicao()
+        {
+            Console.WriteLine($"Essa picape tem {nRodas} rodas, é {nPortas} portas, com a cor: {cor} e placa {placa}");
+        }
 
         public override void Desligar()
         {
@@ -33,5 +49,7 @@ namespace exAbstractAutomovel.Veiculos
         {
             Console.WriteLine("Picape freando");
         }
+
+
     }
 }

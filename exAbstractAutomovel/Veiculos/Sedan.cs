@@ -9,8 +9,24 @@ namespace exAbstractAutomovel.Veiculos
     class Sedan : Automovel
     {
 
-        public Sedan()
+        public Sedan(int nRodas, string cor, string placa, int nPortas) : base(nRodas, cor, placa, nPortas)
         {
+
+        }
+
+        public override void AbrirPortaMalas()
+        {
+            Console.WriteLine("Abrindo porta malas do sedan");
+        }
+
+        public override void AbrirPorta()
+        {
+            Console.WriteLine("Abrindo portas do sedan");
+        }
+
+        public override void Descicao()
+        {
+            Console.WriteLine($"Esse sedan tem {nRodas} rodas, é {nPortas} portas, com a cor: {cor} e placa {placa}");
         }
 
         public override void Desligar()
