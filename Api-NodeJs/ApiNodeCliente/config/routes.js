@@ -33,4 +33,12 @@ routes.delete('/p/:id', (req, res) =>{
     return res.json({message: "Deletado"})
 })
 
+routes.put('/p/:id', (req, res) =>{
+    let  id  = req.params.id;
+    let body = req.body;
+    db[id] = body;
+    return res.json({message: "Alterado"})
+    
+})
+
 module.exports = routes
